@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.env
+.DS_Store
+services/proof-api/.prisma-cache/
+services/proof-api/.cache/
+services/proof-api/dev.db
+services/proof-api/dev.db-journal

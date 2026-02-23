@@ -1,0 +1,63 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Merchant {
+  id            String         @id @default(cuid())
+  externalRef   String         @unique
+  name          String
+  createdAt     DateTime       @default(now())
+  apiKeys       ApiKey[]
+  proofs        ProofRequest[]
+  assertionUses AssertionUse[]
+}
+
+model ApiKey {
+  id         String    @id @default(cuid())
+  keyHash    String    @unique
+  label      String
+  preview    String
+  createdAt  DateTime  @default(now())
+  lastUsedAt DateTime?
+  revokedAt  DateTime?
+  merchantId String
+  merchant   Merchant  @relation(fields: [merchantId], references: [id])
+
+  @@index([merchantId])
+}
+
+model ProofRequest {
+  id            String         @id @default(uuid())
+  subjectRef    String
+  minAge        Int
+  status        String         @default("pending")
+  verifierRef   String?
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+  merchantId    String
+  merchant      Merchant       @relation(fields: [merchantId], references: [id])
+  assertionUses AssertionUse[]
+
+  @@index([merchantId, createdAt])
+}
+
+model AssertionUse {
+  id           String       @id @default(cuid())
+  tokenJti     String       @unique
+  nonce        String
+  subjectRef   String?
+  usedAt       DateTime     @default(now())
+  expiresAt    DateTime?
+  merchantId   String
+  merchant     Merchant     @relation(fields: [merchantId], references: [id])
+  proofRequestId String?
+  proofRequest ProofRequest? @relation(fields: [proofRequestId], references: [id])
+
+  @@unique([merchantId, nonce])
+  @@index([merchantId, usedAt])
+}

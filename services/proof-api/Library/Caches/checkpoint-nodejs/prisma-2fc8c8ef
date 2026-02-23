@@ -1,0 +1,53 @@
+{
+  "last_reminder": 1771863680012,
+  "cached_at": 1771863679732,
+  "version": "5.22.0",
+  "cli_path": "/Users/francescfernandez/Documents/New project/proofage-rail/node_modules/.bin/prisma",
+  "output": {
+    "product": "prisma",
+    "previous_version": "5.22.0",
+    "checkpoint_version": 4,
+    "local_timestamp_without_timezone": "2026-02-23T17:21:18Z",
+    "current_version": "7.4.1",
+    "current_release_date": 1771523765,
+    "client_event_id": "f87e3577-ea24-4fd1-aa4c-2f650abeb455",
+    "current_download_url": "https://github.com/prisma/prisma",
+    "package": "prisma",
+    "release_tag": "latest",
+    "install_command": "npm install --save-dev prisma",
+    "schema_providers": [
+      "sqlite"
+    ],
+    "schema_preview_features": [],
+    "schema_generators_providers": [
+      "prisma-client-js"
+    ],
+    "current_changelog_url": "https://github.com/prisma/prisma",
+    "outdated": true,
+    "project_website": "https://prisma.io",
+    "alerts": []
+  },
+  "product": "prisma",
+  "cli_install_type": "local",
+  "local_timestamp": "2026-02-23T17:49:40+01:00",
+  "project_hash": "9ae5581e",
+  "cli_path_hash": "2fc8c8ef",
+  "endpoint": "https://checkpoint.prisma.io",
+  "arch": "arm64",
+  "os": "darwin",
+  "node_version": "v20.20.0",
+  "command": "generate --schema [redacted]",
+  "schema_providers": [
+    "sqlite"
+  ],
+  "schema_preview_features": [],
+  "schema_generators_providers": [
+    "prisma-client-js"
+  ],
+  "cache_file": "/Users/francescfernandez/Documents/New project/proofage-rail/services/proof-api/Library/Caches/checkpoint-nodejs/prisma-2fc8c8ef",
+  "cache_duration": 43200000,
+  "remind_duration": 172800000,
+  "timeout": 5000,
+  "unref": true,
+  "child_path": "/Users/francescfernandez/Documents/New project/proofage-rail/node_modules/prisma/build/child"
+}

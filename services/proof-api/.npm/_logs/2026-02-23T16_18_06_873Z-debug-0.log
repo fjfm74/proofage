@@ -1,0 +1,37 @@
+0 verbose cli /opt/homebrew/Cellar/node@20/20.20.0/bin/node /opt/homebrew/opt/node@20/bin/npm
+1 info using npm@10.8.2
+2 info using node@v20.20.0
+3 silly config load:file:/opt/homebrew/Cellar/node@20/20.20.0/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/francescfernandez/Documents/New project/proofage-rail/.npmrc
+5 silly config load:file:/Users/francescfernandez/Documents/New project/proofage-rail/services/proof-api/.npmrc
+6 silly config load:file:/opt/homebrew/etc/npmrc
+7 verbose title npm run prisma:generate
+8 verbose argv "--workspace" "services/proof-api" "run" "prisma:generate"
+9 verbose logfile logs-max:10 dir:/Users/francescfernandez/Documents/New project/proofage-rail/services/proof-api/.npm/_logs/2026-02-23T16_18_06_873Z-
+10 verbose logfile /Users/francescfernandez/Documents/New project/proofage-rail/services/proof-api/.npm/_logs/2026-02-23T16_18_06_873Z-debug-0.log
+11 silly logfile done cleaning log files
+12 http fetch GET https://registry.npmjs.org/npm attempt 1 failed with ENOTFOUND
+13 verbose stack Error: command failed
+13 verbose stack     at promiseSpawn (/opt/homebrew/Cellar/node@20/20.20.0/lib/node_modules/npm/node_modules/@npmcli/promise-spawn/lib/index.js:22:22)
+13 verbose stack     at spawnWithShell (/opt/homebrew/Cellar/node@20/20.20.0/lib/node_modules/npm/node_modules/@npmcli/promise-spawn/lib/index.js:124:10)
+13 verbose stack     at promiseSpawn (/opt/homebrew/Cellar/node@20/20.20.0/lib/node_modules/npm/node_modules/@npmcli/promise-spawn/lib/index.js:12:12)
+13 verbose stack     at runScriptPkg (/opt/homebrew/Cellar/node@20/20.20.0/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/run-script-pkg.js:77:13)
+13 verbose stack     at runScript (/opt/homebrew/Cellar/node@20/20.20.0/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/run-script.js:9:12)
+13 verbose stack     at #run (/opt/homebrew/Cellar/node@20/20.20.0/lib/node_modules/npm/lib/commands/run-script.js:130:13)
+13 verbose stack     at RunScript.execWorkspaces (/opt/homebrew/Cellar/node@20/20.20.0/lib/node_modules/npm/lib/commands/run-script.js:62:24)
+13 verbose stack     at async Npm.exec (/opt/homebrew/Cellar/node@20/20.20.0/lib/node_modules/npm/lib/npm.js:207:9)
+13 verbose stack     at async module.exports (/opt/homebrew/Cellar/node@20/20.20.0/lib/node_modules/npm/lib/cli/entry.js:74:5)
+14 verbose pkgid @proofage/proof-api@0.1.0
+15 error Lifecycle script `prisma:generate` failed with error:
+16 error code 1
+17 error path /Users/francescfernandez/Documents/New project/proofage-rail/services/proof-api
+18 error workspace @proofage/proof-api@0.1.0
+19 error location /Users/francescfernandez/Documents/New project/proofage-rail/services/proof-api
+20 error command failed
+21 error command sh -c XDG_CACHE_HOME=./.cache PRISMA_ENGINES_CACHE_DIR=./.prisma-cache prisma generate --schema prisma/schema.prisma
+22 verbose cwd /Users/francescfernandez/Documents/New project/proofage-rail
+23 verbose os Darwin 25.3.0
+24 verbose node v20.20.0
+25 verbose npm  v10.8.2
+26 verbose exit 1
+27 verbose code 1

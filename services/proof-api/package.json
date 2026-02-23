@@ -1,0 +1,27 @@
+{
+  "name": "@proofage/proof-api",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "check": "tsc --noEmit -p tsconfig.json",
+    "db:push": "HOME=$PWD XDG_CACHE_HOME=./.cache PRISMA_ENGINES_CACHE_DIR=./.prisma-cache DATABASE_URL=${DATABASE_URL:-file:./dev.db} prisma db push --schema prisma/schema.prisma --skip-generate",
+    "db:seed": "node scripts/seed-dev.mjs",
+    "prisma:generate": "HOME=$PWD XDG_CACHE_HOME=./.cache PRISMA_ENGINES_CACHE_DIR=./.prisma-cache prisma generate --schema prisma/schema.prisma"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "fastify": "^4.28.1",
+    "jose": "^5.9.6",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "prisma": "^5.22.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}

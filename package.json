@@ -1,0 +1,19 @@
+{
+  "name": "proofage-rail",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "services/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:api": "npm --workspace services/proof-api run dev",
+    "build:api": "npm --workspace services/proof-api run build",
+    "start:api": "npm --workspace services/proof-api run start",
+    "check:api": "npm --workspace services/proof-api run check",
+    "db:push:api": "npm --workspace services/proof-api run db:push",
+    "db:seed:api": "npm --workspace services/proof-api run db:seed",
+    "setup:api": "npm run db:push:api && npm --workspace services/proof-api run prisma:generate && npm run db:seed:api",
+    "replit:start": "npm run setup:api && npm run dev:api"
+  }
+}
