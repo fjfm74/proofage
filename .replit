@@ -1,1 +1,2 @@
+modules = ["nodejs-20"]
 run = "npm run replit:start"
