@@ -42,10 +42,7 @@ El proyecto usa `.replit` con:
 npm run replit:start
 ```
 
-Incluye `replit.nix` con Node 20. Si al primer arranque aparece `npm: command not found`, pulsa `Run` otra vez tras sincronizar el repo, o ejecuta en Shell:
-```bash
-nix-env -iA nixpkgs.nodejs_20
-```
+Si al primer arranque aparece `Install Replit's Node tools [y/n]`, responde `y`.
 
 ## 5) Probar endpoint health
 En `Terminal Comandos Replit`:
