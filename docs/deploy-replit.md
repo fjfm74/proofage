@@ -26,7 +26,7 @@ git push -u origin main
 
 ## 3) Configurar secretos en Replit
 En `Secrets`, crea:
-- `DATABASE_URL` = `file:./services/proof-api/dev.db`
+- `PROOFAGE_DATABASE_URL` = `file:./services/proof-api/dev.db`
 - `VERIFIER_CALLBACK_SECRET` = cadena larga privada
 - `JWT_SIGNING_KEY` = cadena larga (32+ chars)
 - `BOOTSTRAP_API_KEY` = api key inicial larga

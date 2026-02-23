@@ -8,7 +8,7 @@
     "build": "tsc -p tsconfig.json",
     "start": "node dist/server.js",
     "check": "tsc --noEmit -p tsconfig.json",
-    "db:push": "HOME=$PWD XDG_CACHE_HOME=./.cache PRISMA_ENGINES_CACHE_DIR=./.prisma-cache DATABASE_URL=${DATABASE_URL:-file:./dev.db} prisma db push --schema prisma/schema.prisma --skip-generate",
+    "db:push": "HOME=$PWD XDG_CACHE_HOME=./.cache PRISMA_ENGINES_CACHE_DIR=./.prisma-cache PROOFAGE_DATABASE_URL=${PROOFAGE_DATABASE_URL:-file:./dev.db} prisma db push --schema prisma/schema.prisma --skip-generate",
     "db:seed": "node scripts/seed-dev.mjs",
     "prisma:generate": "HOME=$PWD XDG_CACHE_HOME=./.cache PRISMA_ENGINES_CACHE_DIR=./.prisma-cache prisma generate --schema prisma/schema.prisma"
   },

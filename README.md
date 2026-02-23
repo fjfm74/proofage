@@ -98,7 +98,7 @@ curl -X POST http://localhost:8787/v1/relying/verify-assertion \
 ## Como trabajar con Codex en este proyecto
 Cuando estes en esta carpeta, pide tareas concretas, por ejemplo:
 - `crea tests para los endpoints del proof-api`
-- `migra DATABASE_URL a postgres y añade migraciones`
+- `migra PROOFAGE_DATABASE_URL a postgres y añade migraciones`
 - `integra Stripe para billing por consumo`
 - `crea dashboard para merchants en apps/merchant-dashboard`
 
@@ -114,7 +114,7 @@ Pasos:
 1. Sube este proyecto a un repositorio GitHub.
 2. En Replit: `Create Repl` -> `Import from GitHub` -> selecciona el repo.
 3. En `Secrets` de Replit, crea:
-   - `DATABASE_URL=file:./services/proof-api/dev.db`
+   - `PROOFAGE_DATABASE_URL=file:./services/proof-api/dev.db`
    - `VERIFIER_CALLBACK_SECRET=pon_un_valor_largo`
    - `JWT_SIGNING_KEY=pon_un_valor_largo_32+`
    - `BOOTSTRAP_API_KEY=pon_un_api_key_inicial_larga`

@@ -45,8 +45,8 @@ const loadDotEnv = () => {
 };
 
 loadDotEnv();
-if (!process.env.DATABASE_URL) {
-  process.env.DATABASE_URL = "file:./dev.db";
+if (!process.env.PROOFAGE_DATABASE_URL) {
+  process.env.PROOFAGE_DATABASE_URL = "file:./dev.db";
 }
 
 const prisma = new PrismaClient();
