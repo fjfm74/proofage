@@ -14,6 +14,8 @@
     "db:push:api": "npm --workspace services/proof-api run db:push",
     "db:seed:api": "npm --workspace services/proof-api run db:seed",
     "setup:api": "npm run db:push:api && npm --workspace services/proof-api run prisma:generate && npm run db:seed:api",
-    "replit:start": "npm run setup:api && npm run dev:api"
+    "replit:start": "npm run setup:api && npm run dev:api",
+    "deploy:start": "npm run setup:api && npm run build:api && npm run start:api",
+    "start": "npm run deploy:start"
   }
 }

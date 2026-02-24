@@ -53,3 +53,11 @@ curl https://TU_REPL_URL/health
 ## 6) Notas importantes
 - Este despliegue es de pruebas (SQLite local).
 - Para `Servidor Replit (real)` migraremos a Postgres/Supabase.
+
+## 7) Deploy (URL publica estable)
+En Replit Deploy configura:
+- Build command: `npm install`
+- Run command: `npm run deploy:start`
+
+Si Deploy usa comando por defecto, tambien funcionara porque el repo define:
+- `npm start` -> `npm run deploy:start`
